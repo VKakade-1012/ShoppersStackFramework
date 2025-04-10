@@ -61,8 +61,11 @@ public class Base_Test
 	{
 		System.out.println("@BeforeClass");
 		
-		String browser=fileUtility.readDataFromPropertyFile("browsername");
-		String url=fileUtility.readDataFromPropertyFile("url");
+//		String browser=fileUtility.readDataFromPropertyFile("browsername");
+//		String url=fileUtility.readDataFromPropertyFile("url");
+		
+		String browser=System.getProperty("browserName");
+		String url=System.getProperty("url");
 		
 		if(browser.contains("chrome"))
 			driver=new ChromeDriver();
